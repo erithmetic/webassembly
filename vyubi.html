@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Virtual Yubikey</title>
+  </head>
+  <body>
+    <ul id="tokens"></ul>
+    <button onclick="onDownloadCsvClick()">Download CSV</button>
+    <div>
+      <h2>Add token</h2>
+      <label for="name">Name:</label>
+      <input id="name" type="text" />
+      <button onclick="onAddTokenClick()">Add Token</button>
+    </div>
+    <script type="text/javascript" src="vyubi.main.js"></script>
+    <script type='text/javascript'>
+      var Module = {
+        preRun: [],
+        postRun: [vyubiMain],
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+        }
+      };
+      window.onerror = function(event) {
+        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+        Module.setStatus = function(text) {
+          if (text) console.log('[post-exception status] ' + text);
+        };
+      };
+    </script>
+    <script type="text/javascript" src="vyubi.js"></script>
+  </body>
+</html>
+
+
