@@ -1,0 +1,789 @@
+2015-03-05  Klas Lindfors <klas@yubico.com>
+
+	* NEWS: NEWS for 1.13
+
+2014-12-01  Henrik Stråth <minisu@users.noreply.github.com>
+
+	* NEWS: Update NEWS
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: add a bunch of test cases for the crc
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: refactor aes/otp tests to be their own functions
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: refactor hex/modhex tests to more functions
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/Makefile.am: enable warnings for the tests
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: use asserts for tests
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c, ykhex.c: indent fixups make indent..
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: fixup text in test
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: _decode() takes destination size as third
+	parameter
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* Makefile.am, ykhex.c, ykmodhex.c: refactor to make hex and modhex
+	use the same code
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* ykhex.c: fix so we can decode a hex string with uneven amount of
+	characters shown broken in test in last commit
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: add a test for decoding an ueven amount of hex
+	characters this test will fail
+
+2014-11-26  Klas Lindfors <klas@yubico.com>
+
+	* tests/selftest.c: clean up tests a bit don't use same buffer for encode and decode
+
+2014-10-29  Henrik Stråth <minisu@users.noreply.github.com>
+
+	* README: Update README
+
+2014-10-29  Henrik Stråth <minisu@users.noreply.github.com>
+
+	* README: Update README
+
+2014-10-29  Henrik Stråth <minisu@users.noreply.github.com>
+
+	* README: Update README
+
+2014-10-29  Henrik Stråth <henrik@yubico.com>
+
+	* README.adoc: symlinked README
+
+2014-09-12  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, configure.ac: Bump version.
+
+2014-09-04  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Abstract.
+
+2014-09-04  Simon Josefsson <simon@josefsson.org>
+
+	* BLURB: Fix URL.
+
+2014-08-27  Simon Josefsson <simon@josefsson.org>
+
+	* : Merge pull request #8 from eloj/modhex-printf-format-fix Change induction variable type for compatibility
+
+2014-06-11  Klas Lindfors <klas@yubico.com>
+
+	* .travis.yml: let travis install fewer packages
+
+2014-06-11  Klas Lindfors <klas@yubico.com>
+
+	* .travis.yml: let travis install asciidoc for the build
+
+2014-06-11  Simon Josefsson <simon@josefsson.org>
+
+	* README: Doc fix.
+
+2014-06-11  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.12.
+
+2014-06-11  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Improve release target.
+
+2014-06-11  Simon Josefsson <simon@josefsson.org>
+
+	* .gitignore, Makefile.am, NEWS, configure.ac, modhex.1,
+	modhex.1.txt, ykgenerate.1, ykgenerate.1.txt, ykparse.1,
+	ykparse.1.txt: Asciidocify man pages.
+
+2013-12-17  Klas Lindfors <klas@yubico.com>
+
+	* ykgenerate.c: no need to loop through otp to print it, just print
+	it
+
+2013-12-17  Klas Lindfors <klas@yubico.com>
+
+	* ykgenerate.c: make otp variable large enough as yubikey_generate() called yubikey_modhex_encode() which adds \0
+	otp must be YUBIKEY_OTP_SIZE + 1
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* README, configure.ac: Cleanups.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* ykaes.c: Drop C++ comments.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, tests/selftest.c, ykaes.c, yubikey.h: Indent code.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, configure.ac: Bump versions.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Fix release target.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Fix release target.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.11.
+
+2013-10-18  Simon Josefsson <simon@josefsson.org>
+
+	* README: Doc fix.
+
+2013-10-17  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Dist more man pages.  Run distcheck with warning
+	flags enabled.
+
+2013-10-17  Simon Josefsson <simon@josefsson.org>
+
+	* .gitignore: Fix git ignores.
+
+2013-10-17  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, tests/Makefile.am: Run tests under valgrind.
+
+2013-10-17  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac, m4/valgrind-tests.m4: Minor configure.ac fixes.
+
+2013-10-17  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS, README, modhex.1, ykgenerate.1, ykparse.1: Add
+	man pages.  Improve README.
+
+2013-10-17  Simon Josefsson <simon@josefsson.org>
+
+	* .gitignore: Ignore more.
+
+2013-10-11  Simon Josefsson <simon@josefsson.org>
+
+	* README: Improve README.
+
+2013-09-26  Klas Lindfors <klas@yubico.com>
+
+	* .gitignore: ignore release files
+
+2013-09-26  Klas Lindfors <klas@yubico.com>
+
+	* BLURB: add category to BLURB
+
+2013-09-23  Klas Lindfors <klas@yubico.com>
+
+	* README: add asciidoc heading to README
+
+2013-09-21  Simon Josefsson <simon@josefsson.org>
+
+	* BLURB: Fix.
+
+2013-09-21  Simon Josefsson <simon@josefsson.org>
+
+	* BLURB: Add.
+
+2013-04-22  Dain Nilsson <dain@yubico.com>
+
+	* Makefile.am: Fix release publishing.
+
+2013-04-10  Dain Nilsson <dain@yubico.com>
+
+	* Makefile.am: Updated artifact publishing in Makefile.
+
+2013-04-05  Dain Nilsson <dain@yubico.com>
+
+	* Makefile.am: Move releases to yubico.github.com
+
+2013-03-12  Klas Lindfors <klas@yubico.com>
+
+	* NEWS, configure.ac: bump versions post-release
+
+2013-03-12  Klas Lindfors <klas@yubico.com>
+
+	* configure.ac: bump LT_REVISION
+
+2013-03-12  Klas Lindfors <klas@yubico.com>
+
+	* NEWS: NEWS for 1.10
+
+2013-01-18  Klas Lindfors <klas@yubico.com>
+
+	* configure.ac: bump automake requirement to 1.11 resolves #2
+
+2012-11-07  Klas Lindfors <klas@yubico.com>
+
+	* configure.ac: move around the AM_PROG_AR call to avoid warnings
+
+2012-10-29  Nick Parker <nparker@zetetic.net>
+
+	* configure.ac: Adjustment to allow automake 1.12.4 to run without
+	warnings
+
+2012-09-13  Klas Lindfors <klas@yubico.com>
+
+	* : commit 7f685f4a046cfc0bb74051d5ab27c274664af140 Author: Klas
+	Lindfors <klas@yubico.com> Date:   Thu Sep 13 09:48:38 2012 +0200
+
+2012-08-24  Simon Josefsson <simon@josefsson.org>
+
+	* ykhex.c, ykmodhex.c: Constify.  Solves MSVS problem reported by
+	jklontz.
+
+2012-08-23  Simon Josefsson <simon@josefsson.org>
+
+	* modhex.c, ykgenerate.c, ykhex.c, ykmodhex.c, ykparse.c, yktoken.c: 
+	Rewrite to not use stdbool, for MSVC.  Suggested by jklontz.
+
+2012-08-23  Simon Josefsson <simon@josefsson.org>
+
+	* yktoken.c: Fix casts, suggested by jklontz.
+
+2012-08-23  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS, configure.ac, m4/manywarnings.m4,
+	m4/warnings.m4, ykgenerate.c, yktoken.c: Enable warnings.  Fix some
+	warnings.
+
+2012-08-13  Rony Shapiro <ronys@users.sourceforge.net>
+
+	* Makefile.am, README: Fixed make check dependency correctly, per
+	Klas's suggestion
+
+2012-08-13  Rony Shapiro <ronys@users.sourceforge.net>
+
+	* README: Corrected make invocation in README
+
+2012-08-13  Rony Shapiro <ronys@users.sourceforge.net>
+
+	* .gitignore: Added compilation products to .gitignore
+
+2012-05-31  Klas Lindfors <klas@yubico.com>
+
+	* NEWS, configure.ac: prepare for the next release
+
+2012-05-31  Klas Lindfors <klas@yubico.com>
+
+	* NEWS: prepare version 1.9
+
+2012-05-31  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2012-05-31  Simon Josefsson <simon@josefsson.org>
+
+	* m4/ld-version-script.m4: Update from gnulib.
+
+2012-05-10  Simon Josefsson <simon@josefsson.org>
+
+	* ykparse.c: Doc fix.
+
+2012-03-13  Tollef Fog Heen <tfheen@err.no>
+
+	* tests/Makefile.am: Add missing -I$(top_srcdir) for out-of-tree
+	builds
+
+2012-03-13  Fredrik Thulin <fredrik@yubico.com>
+
+	* NEWS, configure.ac: Prepare for next release.
+
+2012-03-13  Fredrik Thulin <fredrik@yubico.com>
+
+	* Makefile.am: Fix googlecode_upload.py commands.
+
+2012-03-13  Fredrik Thulin <fredrik@yubico.com>
+
+	* README, simple.mk, test-vectors.txt, ykcrc.c, yktoken.c,
+	yubikey.h: s/Yubikey/YubiKey/
+
+2012-03-13  Fredrik Thulin <fredrik@yubico.com>
+
+	* NEWS: Prepare version 1.8.
+
+2012-03-13  Fredrik Thulin <fredrik@yubico.com>
+
+	* .gitignore: init
+
+2012-03-13  Fredrik Thulin <fredrik@yubico.com>
+
+	* Makefile.am: Update for Git.
+
+2012-03-13  Simon Josefsson <simon@josefsson.org>
+
+	* README: clean up readme from markup.
+
+2012-03-13  Simon Josefsson <simon@josefsson.org>
+
+	* simple.mk, selftest.c => tests/selftest.c: Make last commit work.
+	Update simple.mk too.
+
+2012-03-12  Fredrik Thulin <fredrik@yubico.com>
+
+	* Makefile.am, configure.ac, tests/Makefile.am: Fix insecure rpath.  http://code.google.com/p/yubico-c/issues/detail?id=5
+
+2012-01-23  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac: Use silent rules.
+
+2012-01-23  Simon Josefsson <simon@josefsson.org>
+
+	* selftest.c: Silence compiler warning.
+
+2012-01-23  Simon Josefsson <simon@josefsson.org>
+
+	* COPYING, Makefile.am, README, configure.ac, libyubikey.map,
+	modhex.c, selftest.c, simple.mk, ykaes.c, ykcrc.c, ykgenerate.c,
+	ykhex.c, ykmodhex.c, ykparse.c, yktoken.c, yubikey.h: Fix compiler
+	warnings.  Bump copyright years.
+
+2011-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2011-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* modhex.c: Fix memory leak.
+
+2011-11-23  Simon Josefsson <simon@josefsson.org>
+
+	* README: Shift blame.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac: Bump version.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Save a local copy of release.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.7.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* yubikey.h: Fix C++ namespace.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2010-11-24  Simon Josefsson <simon@josefsson.org>
+
+	* yubikey.h: Add C++ extern scoping.  Reported by Giampaolo Bellini <iw2lsi@gmail.com>.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Fix release target.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, configure.ac: Bump versions.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.6.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* README: Update examples.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* README: Improve.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* README: Update.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS, simple.mk, ykdebug.c, ykgenerate.c, ykparse.c,
+	yktoken.c: Rename ykdebug tool to ykparse.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* README: Update.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, yubikey.h: Added YUBIKEY_OTP_SIZE constant for OTP buffer
+	size.
+
+2010-08-03  Simon Josefsson <simon@josefsson.org>
+
+	* ykparse.c: Lowercase.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, THANKS: Add THANKS file.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* AUTHORS: Improve.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* AUTHORS: Add.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Use google account.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* libyubikey.map, ykgenerate.c, ykhex.c, yubikey.h: Remove
+	yubikey_uint16_t_hex_decode.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* selftest.c, ykaes.c, yubikey.h: Cleanup AES encrypt code.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* modhex.c, selftest.c, ykaes.c, ykcrc.c, ykdebug.c, ykgenerate.c,
+	ykhex.c, ykparse.c, yubikey.h: Indent code.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* libyubikey.map: Export new ABIs.
+
+2010-06-01  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, selftest.c, simple.mk, ykaes.c, ykgenerate.c,
+	ykhex.c, ykparse.c, yubikey.h: Add functionality to generate OTPs.
+
+2010-04-27  Simon Josefsson <simon@josefsson.org>
+
+	* .svnignore: Use properties instead of .svnignore.
+
+2010-04-27  Simon Josefsson <simon@josefsson.org>
+
+	* .svnignore: Add.
+
+2010-03-09  Simon Josefsson <simon@josefsson.org>
+
+	* yubikey.h: Drop incorrect comment, caps lock triggering no longer
+	working.
+
+2009-08-31  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, configure.ac: Bump versions.
+
+2009-08-31  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.5.
+
+2009-08-31  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Fix.
+
+2009-08-31  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac: Call gl_LD_VERSION_SCRIPT.
+
+2009-08-31  Simon Josefsson <simon@josefsson.org>
+
+	* libyubikey.map: Add.
+
+2009-08-31  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS, m4/ld-version-script.m4: Use linker version
+	script.
+
+2009-08-28  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Typo.
+
+2009-08-28  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, configure.ac, selftest.c, ykhex.c, ykmodhex.c, yubikey.h: 
+	Add yubikey_modhex_p and yubikey_hex_p.
+
+2009-06-22  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Fix release target.
+
+2009-04-30  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.4.
+
+2009-04-30  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Fix release target.
+
+2009-04-30  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, README, configure.ac, selftest.c, simple.mk, ykdebug.c: Make
+	ykdebug use hex keys.  Prepare for release.
+
+2009-04-30  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS, selftest.c, ykhex.c, yubikey.h: Add hex
+	functions.
+
+2009-03-30  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, README: Improve build instructions.
+
+2009-03-30  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS, configure.ac: Bump versions.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.3.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Fix release target.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* ykdebug.c, yubikey.h: Cosmetic fixes.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* COPYING, README: Doc fix.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* selftest.c: Indent.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* ykparse.c: Fix warning.  Indent.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* ykaes.c: Add, from yubikey.c.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, simple.mk, yubikey.c => ykparse.c: Separate ykparse
+	function.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, simple.mk, yubikey.c: Separate aes functions.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* selftest.c: Fix debug output.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, simple.mk, ykcrc.c, yubikey.c: Separate crc function.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* ykdebug.c: Fix warnings.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* selftest.c: Fix warnings.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac: Bump versions.
+
+2009-03-25  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS, modhex.c, simple.mk, ykmodhex.c, yubikey.c,
+	yubikey.h: Add YUBIKEY_MODHEX_MAP.  Use char* instead of uint8_t*.
+	Separate modhex functions.
+
+2009-03-17  Simon Josefsson <simon@josefsson.org>
+
+	* test-vectors.txt: More test vectors.
+
+2009-03-17  Simon Josefsson <simon@josefsson.org>
+
+	* test-vectors.txt: Add modhex decoding of prefix.
+
+2009-01-13  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.2.
+
+2009-01-13  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, configure.ac: Fix libtool warnings.
+
+2008-09-19  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Install yubikey.h.  Reported by Richard Levitte
+	<levitte@lp.se>.
+
+2008-09-17  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, NEWS: Use -export-symbols-regex.
+
+2008-06-16  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac: Bump versions.
+
+2008-06-16  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2008-06-16  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Drop -lpam.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* README: Add labels.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.1.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* README: Fixes.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Uploade release too.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Add.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* configure.ac: Bump versions.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, Makefile.simple => simple.mk: Rename simple.mk.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* README: Update to refer to simple.mk.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* NEWS: Version 1.0.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* README: Fix ykdebug reference.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, Makefile.simple, README, yubikey-debug.c =>
+	ykdebug.c: Rename to ykdebug.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* selftest.c: Fix namespace.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* sefltest.c => selftest.c: Fix typo.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.simple: Update.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* README, tool.c => yubikey-debug.c: Rename, use new namespace.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am: Build modhex and yubikey-debug.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* modhex.c: Namespace fix.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* yubikey.c, yubikey.h: Fix namespace.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile.am, Makefile => Makefile.simple, pof-test.c =>
+	sefltest.c, pof.c => yubikey.c, pof.h => yubikey.h: Rename.
+
+2008-06-10  Simon Josefsson <simon@josefsson.org>
+
+	* AUTHORS, Makefile.am, NEWS, configure.ac: Use autoconf, automake
+	and libtool.
+
+2008-06-03  Simon Josefsson <simon@josefsson.org>
+
+	* tool.c: Check token length.  Suggested by Jorj Bauer
+	<jorj@seas.upenn.edu>.
+
+2008-05-12  Simon Josefsson <simon@josefsson.org>
+
+	* pof.h: Fix typo.  Suggested by Steve Gibson.
+
+2008-05-06  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile: Fix dependency.
+
+2008-05-06  Simon Josefsson <simon@josefsson.org>
+
+	* pof.h: Fix comment describing session counter semantics.
+	Suggested by Steve Gibson <steve2008@grc.com>.
+
+2008-05-04  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile: Add COPYING to *.zip, suggested by Gregory Bell
+	<greg@collectivesoftware.com>.
+
+2008-05-03  Simon Josefsson <simon@josefsson.org>
+
+	* README: Converted to google code wiki markup.
+
+2008-05-01  Simon Josefsson <simon@josefsson.org>
+
+	* Makefile: Improve zip filename.
+
+2008-05-01  Simon Josefsson <simon@josefsson.org>
+
+	* COPYING, Makefile, README, modhex.c, pof-test.c, pof.c, pof.h,
+	test-vectors.txt, tool.c: Initial import from internal CVS
+	repository, with new license.
+
+2008-05-01  Simon Josefsson <simon@josefsson.org>
+
+	* Initial directory structure.
+
